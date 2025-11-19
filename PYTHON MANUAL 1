@@ -1,0 +1,310 @@
+
+# # PYTHON LAB MANUAL 1
+# 
+
+# ##### Q1 find the square root of a floating-point number.
+
+# In[10]:
+
+
+import math
+n=float(input("enter a number"))
+s=math.sqrt(n)
+print(s)
+
+
+# ##### Q.2 convert temperature in degree Celsius to degree Fahrenheit.
+
+# In[11]:
+
+
+cel=float(input("enter temp. in celcius :"))
+
+fer=cel*9/5+32
+
+print(fer ,"F")
+boil=100*9/5+32
+freeze=0*9/5+32
+print("boiling point" , boil , "F")
+print("freezing point" ,freeze, "F")
+
+
+# ##### Q.3 calculate the amount payable if money has been lent on simple interest.
+
+# In[12]:
+
+
+P=float(input("enter principal / money lent :"))
+RI=float(input("enter rate of interest :"))
+T=float(input("enter years :"))
+SI= (P * RI * T)/ 100
+#print(SI)
+AP=SI+P
+print ("ammount payable = ", AP)
+
+
+# ##### Q.4 calculate in how many days a work will be completed by three persons 𝐴,𝐵 and 𝐶 together
+
+# In[13]:
+
+
+x=int(input("DAYS OF A :"))
+y=int(input("DAYS OF B :"))
+z=int(input("DAYS OF C :"))
+
+# 𝑥𝑦𝑧/(𝑥𝑦 + 𝑦𝑧 + 𝑥𝑧)
+    
+tot=x*y*z/(x*y+y*z+x*z)
+
+print(tot)
+
+
+# ##### Q5 swap two numbers using a third variable. 
+
+# In[14]:
+
+
+a=int (input("enter 1st variable :"))
+b=int (input("enter 2st variable :"))
+temp=a
+a=b
+b=temp
+print("afer swapping  :")
+print ("1st variable is ",a)
+print ("2nd variable is ",b)
+
+
+# ##### Q6 swap two numbers without using a third variable
+
+# In[15]:
+
+
+a=int (input("enter 1st variable :"))
+b=int (input("enter 2st variable :"))
+a=a+b
+b=a-b
+a=a-b
+print("afer swapping  :")
+print ("1st variable is ",a)
+print ("2nd variable is ",b)
+
+
+# ##### Q7  find sum and average of 3 numbers
+
+# In[16]:
+
+
+import math
+a=int (input("enter 1st num :"))
+b=int (input("enter 2nd num :"))
+c=int (input("enter 3rd num :"))
+sum=a+b+c
+print (sum)
+avg=sum/3
+print (avg)
+
+
+# ##### Q8 volume of sphere with radius 7𝑐𝑚, 12𝑐𝑚, 16𝑐𝑚, respectively.
+
+# In[5]:
+
+
+PI=3.14
+r1,r2,r3=7,12,16
+
+vol1=4/3 * PI* (r1**3)
+vol2=4/3 * PI* (r2**3)
+vol3= 4/3 * PI*(r3**3)
+print (f"volume for  7cm: {vol1 : .4f}")
+print (f"volume for  12cm: {vol2 : .4f}")
+print (f"volume for  16cm: {vol3 : .4f}")
+
+
+# ##### Q9 volume of sphere with radius 𝑟 taken as input from user
+
+# In[6]:
+
+
+PI=3.14
+r=float(input("enter radius of the sphere :"))
+vol=(4/3) * PI * (r**3)
+print(vol)
+
+
+# ##### Q10 in which they will turn 100 years old. 
+
+# In[8]:
+
+
+name = str(input ("enter your name : "))
+age= int(input("enter your age : "))
+curyear=2025
+x=100-age
+abc= curyear+x
+print(name ," you turn 100 in the year of",abc)
+
+
+# ##### Q11  accepts the mass of an object and determines its energy. 
+
+# In[24]:
+
+
+c= 3*(10**8)
+m=float(input ("enter mass of an object :"))
+e=m*(c**2)
+print("energy : " , e , "joule ")
+
+
+# ##### Q12 find the height reached by the ladder on the wall
+
+# In[9]:
+
+
+import math
+
+length = float(input("Enter the length of the ladder: "))
+angle = float(input("Enter the angle (in degrees): "))
+
+angle_radians = math.radians(angle)
+
+height = length * math.sin(angle_radians)
+
+print("The height reached by the ladder on the wall is:", height)
+
+
+# ##### Q13.  𝑃(𝑥) = 3𝑥5 + 3𝑥4 −4𝑥3 +10. The value of 𝑥 is input by the user. 
+
+# In[25]:
+
+
+x=int (input("enter value of x : "))
+
+p=3*x**5 + 3*x**4 - 4*x**3+10
+print("p(x) is : ",p)
+
+
+# ##### Q14 find the total price of an item, if quantity and price per quantity is entered by the user. 
+
+# In[34]:
+
+
+price=float(input("enter price of the item : "))
+quan=int(input("enter quantity of the item : "))
+tot_price=price*quan
+print("total price is ",tot_price)
+
+
+# ##### Q15  find the area of triangle with sides 𝑎,𝑏 and 𝑐. 
+
+# In[31]:
+
+
+import math
+a=float(input("enter the side a : "))
+b=float(input("enter the side b : "))
+c=float(input("enter the side c : "))
+s=(a+b+c)/2
+
+
+area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print(f"area of triangle is :{area:.2f}")
+
+
+# ##### Q16 find Sigmoid function 𝑆(𝑥) =1/ 1+e^-x
+
+# In[32]:
+
+
+import math
+x=int(input("enter value of x :  "))
+s= 1/ 1+ math.exp(-x)
+print("Sigmoid function : ",s)
+
+
+# ##### Q17  Find nth Fibonacci number.
+
+# In[33]:
+
+
+import math
+n=int(input("enter a number : "))
+x=(1+ math.sqrt(5))/2
+F=((x**n)-(-1/math.sqrt(x))**n)/math.sqrt(5)
+print(f"Fibonacci no is : {F: .0f}")
+
+
+# ##### Q18  Write a program to find the sum, difference, product and average of  two complex numbers. 
+
+# In[39]:
+
+
+c1 = complex(input("Enter first complex number (a+bj): "))
+c2 = complex(input("Enter second complex number (a+bj): "))
+
+sum_c = c1 + c2
+diff_c = c1 - c2
+prod_c = c1 * c2
+avg_c = (c1 + c2) / 2
+
+print("Sum =", sum_c)
+print("Difference =", diff_c)
+print("Product =", prod_c)
+print("Average =", avg_c)
+
+
+# ##### Q19  Find the absolute value of a complex number 𝑐 = 𝑎 + 𝑏𝑗. 
+
+# In[42]:
+
+
+c = complex(input("Enter a complex number (a+bj): "))
+
+absolute_value = abs(c)
+
+print("Absolute value =", absolute_value)
+
+
+# ##### Q20 Find the Euclidean distance between two points (𝑎,𝑏) and (𝑐,𝑑).
+
+# In[43]:
+
+
+import math
+a=int (input("enter point a :"))
+b=int (input("enter point b :"))
+c=int (input("enter point c :"))
+d=int (input("enter point d :"))
+
+s=math.sqrt((c-a)**2 + (d-b)**2)
+print("Distance between 2 points : ",round(s,4))
+
+
+# ##### Q21  Find the gravitational force between earth and sun.
+
+# In[45]:
+
+
+import math
+M=2*(10**30)  #mass of sun
+m=6*(10**24)  #mass of earth
+r=1.5*(10**11) # distance bet earth & sun 
+G=6.67* (10** (1/11))  #gravitational constant
+
+F=(G*M*m)/ r**2  #gravitational force 
+
+print("gravitational force is : ",F)
+
+
+# ##### Q22 Find the horizontal distance of the javelin threw by Chopra.
+
+# In[46]:
+
+
+import math
+u=29.378
+deg=46
+g=9.8
+rad=math.radians(deg)
+dis=((u**2)*math.sin(2*rad))/g
+print("neeraj chopra throws :",dis,"metre" )
+
